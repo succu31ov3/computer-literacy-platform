@@ -2,6 +2,8 @@ import Hero from "@/components/Hero";
 import ModuleCard from "@/components/ModuleCard";
 import StatsSection from "@/components/StatsSection";
 import GameElements from "@/components/GameElements";
+import VideoLessons from "@/components/VideoLessons";
+import TutorBooking from "@/components/TutorBooking";
 
 const Index = () => {
   const modules = [
@@ -46,17 +48,17 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Hero />
 
       {/* Модули обучения */}
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
               Выбери свой путь 🛤️
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Каждый модуль — это увлекательное приключение в мире технологий!
             </p>
           </div>
@@ -69,6 +71,8 @@ const Index = () => {
         </div>
       </section>
 
+      <VideoLessons />
+      <TutorBooking />
       <StatsSection />
       <GameElements />
 

@@ -1,9 +1,15 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 text-white py-20 px-6">
+    <section className="bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 text-white py-20 px-6 relative">
+      {/* Theme Toggle in top right */}
+      <div className="absolute top-6 right-6">
+        <ThemeToggle />
+      </div>
+
       <div className="max-w-6xl mx-auto text-center">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
