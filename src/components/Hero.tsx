@@ -24,7 +24,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300"
+              className="border-2 border-white bg-white/10 text-white hover:bg-white hover:text-purple-600 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 backdrop-blur-sm"
             >
               <Icon name="Trophy" className="mr-2" />
               Мои достижения
