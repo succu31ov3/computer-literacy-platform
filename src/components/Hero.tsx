@@ -1,12 +1,44 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import ThemeToggle from "@/components/ThemeToggle";
+import UserAvatar from "@/components/UserAvatar";
+import { useAuth } from "@/contexts/AuthContext";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const { user } = useAuth();
+
   return (
     <section className="bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 text-white py-20 px-6 relative">
-      {/* Theme Toggle in top right */}
-      <div className="absolute top-6 right-6">
+      {/* Header with auth buttons and theme toggle */}
+      <div className="absolute top-6 right-6 flex items-center gap-3">
+        {user ? (
+          <UserAvatar />
+        ) : (
+          <div className="flex gap-2">
+            <Button
+              asChild
+              variant="ghost"
+              size="sm"
+              className="text-white hover:bg-white/20 hover:text-white"
+            >
+              <Link to="/login">
+                <Icon name="LogIn" className="mr-1 h-4 w-4" />
+                Вход
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="sm"
+              className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold"
+            >
+              <Link to="/register">
+                <Icon name="UserPlus" className="mr-1 h-4 w-4" />
+                Регистрация
+              </Link>
+            </Button>
+          </div>
+        )}
         <ThemeToggle />
       </div>
 
